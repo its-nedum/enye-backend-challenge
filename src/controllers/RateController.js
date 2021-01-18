@@ -9,9 +9,15 @@ const getRates = async (req, res) => {
     const { base, currency } = req.query;
 
     // check if all query parameters are provided
-    if (!base || !currency) {
+    if (!base) {
         return res.status(400).json({
-            message: 'Incomplete query parameter'
+            message: 'Please provide the currency base'
+        });
+    }
+    
+    if (!currency) {
+        return res.status(400).json({
+            message: 'Please provide the exchange rate(s)'
         });
     }
 

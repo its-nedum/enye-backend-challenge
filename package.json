@@ -4,7 +4,7 @@
   "description": "This api will accept requests and return a modified response from the integrated API",
   "main": "./src/server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/server.js",
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
